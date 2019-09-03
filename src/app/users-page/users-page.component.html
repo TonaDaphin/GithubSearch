@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                    <a class="nav-link" href="#"><b>Github Search</b></a>
+                  </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="container">
+                  <!-- Search -->
+      <div class="jumbotron">
+          <h1 class="display-3">Welcome to Github Search</h1>
+          <input class="form-control" placeholder="Enter Username" #newUser (keyup.enter)="searchUser(newUser.value)"/>
+          <button class="btn btn-secondary" (click)="searchUser(newUser.value)">Search</button>
+      </div>
+    <br><br>
+    <h1>Github Search</h1>
+    <hr />
+    <div class="row">
+      <div class="col-md-6">
+                  <!-- User Info -->
+        <div>
+          <br />
+          <img width="30%" src="{{ user.avatar }}" />
+          <p>Name: {{ user.username }}</p>
+          <p>Followers: {{ user.followers }}</p>
+          <p>Following: {{ user.following }}</p>
+          <p>Member since: {{ user.createdDate | date }}</p>
+          <!-- <button (click)="goToUrl(repo / details)" class="btn btn-outline-secondary">Repo(s): {{ user.repo }}</button> -->
+        </div>
+      </div>
+    </div>
+  </div>

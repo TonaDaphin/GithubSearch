@@ -1,0 +1,14 @@
+<button (click)="dispalyRepo(newUser.value)"class="btn btn-outline-secondary"
+(click)="showRepository()">
+Repo(s): {{ user.repo }}</button>
+<div class="col-md-6">
+    <!-- Repo Info -->
+    <div class="row hidden" *ngIf="show === true">
+        <div *ngFor="let repo of repos" class="col-md-3 repoColumn">
+        <p>Name:<span>{{repo.repoName}}</span> </p>
+        <p>Description:{{repo.description}}</p>
+        <p>Language:{{repo.livelink<p>Forks:{{repo.forks}}</p>
+      </div>
+    </div>
+</div>
+
